@@ -13,7 +13,7 @@ def send_continue_action(self, user_id = None):
         message += "\n5 - Посмотреть людей, которым понравилась анкета"
         keyboard += {"5": "green"}
     elif has_pending and vip:
-        message += "\n5 - Посмотреть людей, которым понравилась анкета\n\n6 - Посмотреть историю"
+        message += "\n5 - Посмотреть людей, которым понравилась анкета\n6 - Посмотреть историю"
         keyboard += {"5": "green", "6": "blue"}
     elif not has_pending and vip:
         message += "\n5 - Посмотреть историю"

@@ -274,6 +274,8 @@ class Database(object):
             data, value = jsonExtension.isDeserializable(v)
             if value:
                 attr = myStruct.boundStructByAction(k, data)
+            if isinstance(getattr(myStruct, k), bool):
+                attr = bool(attr)
             myStruct.setattr(k, attr, False)
         return myStruct
 

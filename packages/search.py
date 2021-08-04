@@ -55,7 +55,7 @@ def continue_action(self):
     action = parseInt(self.text)
     has_pending = len(self.db.select("select * from pending where peer_id = ?", [self.user.id])) > 0
     vip = Profile(self.db, user_id = self.user.id).vip
-    if not action or action < 0 or action > 5:
+    if not action or action < 0 or action > 6:
         self.reply("Нет такого варианта ответа. Попробуйте еще раз.")
         return True
     if action == 1:
@@ -72,6 +72,8 @@ def continue_action(self):
         browse_pending(self)
     elif action == 5 and not has_pending and vip:
         VIP.browse_history(self, 0)
+    elif action == 5 and vip:
+        browse_pending(self)
     elif action == 6 and vip:
         VIP.browse_history(self, 0)
 

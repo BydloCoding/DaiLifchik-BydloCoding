@@ -20,7 +20,7 @@ class Profile(Struct):
         self.chatting_with = ""
         self.city = ""
         self.history = []
-        self.vip = True
+        self.vip = 1
         super().__init__(*args, **kwargs)
 
     def len_attachments(self, factor_voice_message=True):
