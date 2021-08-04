@@ -3,6 +3,7 @@
     "db_backups": false,
     "db_backups_folder": "backups/",
     "db_backup_interval": 43200,
-    "sync_timezone": "Asia/Aden",
+    "history_size": 5,
+    "sync_timezone": "Europe/Moscow",
     "vk_api_key": ""
 }
